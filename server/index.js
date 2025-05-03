@@ -1,0 +1,20 @@
+const express = require("express");
+const app = express();
+
+const db = require("./models");
+
+//Routers
+const postUsers = require("./routes/usersR");
+app.use("/usersR", postUsers);
+
+db.sequelize
+  .sync()
+  .then(() => {
+    app.listen(3000, () => {
+      console.log("Server is running on port 3000");
+    });
+    console.log("Database synced successfully!");
+  })
+  .catch((err) => {
+    console.error("Error syncing database:", err);
+  });
