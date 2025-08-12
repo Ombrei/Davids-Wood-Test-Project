@@ -1,0 +1,229 @@
+/* SignIn */
+body {
+  height: 100vh;
+  background-color: #8b4e2f;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  padding: 50px;
+  height: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+#signInBtn {
+  background-color: rgba(139, 78, 47, 0.741);
+  border: none;
+}
+
+#signInBtn:hover {
+  background-color: #8b4e2f;
+}
+
+/* SignUp */
+#signUpBtn {
+  background-color: #8b4e2fbd;
+  border: none;
+}
+
+#signUpBtn:hover {
+  background-color: #8b4e2f;
+}
+
+/* Products */
+.title-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-description {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.2em;
+  max-height: 3.6em;
+  margin-bottom: 0.5rem;
+}
+
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(5px);
+}
+
+.add-to-cart-button {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Notification pop-up */
+.notification-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #8b4e2f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Landing Page */
+.carousel-container {
+  position: relative;
+  padding: 0;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  margin: 0 40px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+}
+
+.carousel-button-right {
+  right: 0;
+  left: auto;
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+.product-img {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.no-img {
+  background-color: #a0522d;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1001;
+}
+
+/* About Page something */
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-col {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 10px;
+}
+
+.member-container {
+  background-color: #d3bda6;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 20px;
+  text-align: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Crop and scale the image to fit */
+}
+
+.tip-email {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

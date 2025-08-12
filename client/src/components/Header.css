@@ -1,0 +1,52 @@
+.custom-navbar {
+  background-color: #d3bda6;
+}
+
+.custom-navbar .container-fluid {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.header {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: #fff;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d0eaff;
+}
+
+.navbar-brand .logo {
+  height: 40px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.btn {
+  border: none;
+}
+
+#checkoutBtn {
+  background-color: #8b4e2f;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+
+.badge-custom {
+  background-color: #8b4e2f;
+  color: #fff;
+}
+.total-price {
+  color: #8b4e2f;
+}
+

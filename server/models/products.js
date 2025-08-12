@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       price: {
-        type: DataTypes.DECIMAL(10, 2),
+        type: DataTypes.FLOAT,
         allowNull: false,
       },
       stockQuantity: {
@@ -27,12 +27,25 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BLOB("long"),
         allowNull: true,
       },
+      prodType: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       tableName: "products",
       timestamps: true,
     }
   );
+
+  Products.associate = function (models) {
+    Products.belongsToMany(models.Orders, {
+      through: models.OrderItems,
+      foreignKey: "prodId",
+      otherKey: "orderId",
+      as: "orders",
+    });
+  };
 
   return Products;
 };
