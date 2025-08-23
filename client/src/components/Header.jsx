@@ -22,7 +22,6 @@ function Header() {
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
 
-  // Handle click outside for dropdowns
   useEffect(() => {
     const handleClickOutsideCart = (event) => {
       if (
@@ -65,7 +64,7 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutsideAdmin);
   }, []);
 
-  // Retrieve user info from localStorage
+  // retrieve user info
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
@@ -75,7 +74,7 @@ function Header() {
     }
   }, []);
 
-  // Helper functions for the cart operations.
+  // cart operations.
   const handleIncrement = (item) => {
     addToCart(item);
   };
@@ -84,9 +83,7 @@ function Header() {
     removeFromCart(prodId);
   };
 
-  const handleDelete = (prodId) => {
-    // Implement complete removal if needed, e.g. removeFromCart(prodId, true);
-  };
+  const handleDelete = (prodId) => {};
 
   const handleSignOut = () => {
     localStorage.removeItem("user");
@@ -94,7 +91,7 @@ function Header() {
     navigate("/SignIn");
   };
 
-  // Compute admin menu items based on userType (case-insensitive and trimmed)
+  //compute admin menu items
   let adminMenuItems = [];
   if (loggedInUser && loggedInUser.userType) {
     const userTypeLower = loggedInUser.userType.trim().toLowerCase();
