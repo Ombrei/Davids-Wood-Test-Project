@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header";
 import "../pages/stylePages.css";
 
-// Pictures of members
+// members
 import yuan from "../assets/yuan.jpg";
 import yapi from "../assets/yapi.jpg";
 import kim from "../assets/kim.png";
