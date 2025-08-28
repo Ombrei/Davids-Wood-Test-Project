@@ -2,22 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Header from "../Header";
 import "./style.css";
+import useProducts from "../adminPages/fetchProd";
 
 function InvManagement() {
+  const { products: fetchedProducts, refresh: fetchProducts } = useProducts();
   const [products, setProducts] = useState([]);
   const [editingProductId, setEditingProductId] = useState(null);
   const [newStock, setNewStock] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const filterScrollRef = useRef(null);
-
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/productsR");
-      setProducts(response.data);
-    } catch (err) {
-      console.error("Error fetching products:", err);
-    }
-  };
 
   useEffect(() => {
     fetchProducts();
