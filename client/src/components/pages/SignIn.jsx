@@ -14,27 +14,20 @@ function SignIn() {
     e.preventDefault();
 
     try {
-      // Send credentials to the sign-in endpoint
       const response = await axios.post("http://localhost:3000/usersR/signin", {
         email,
         password,
       });
-
-      // Assume the response returns all user details,
-      // including a property called userType.
       localStorage.setItem("user", JSON.stringify(response.data));
       const { userType } = response.data;
 
-      // Redirect based on account type
       if (userType === "admin") {
-        // For admin accounts, redirect to the product management page.
         navigate("/LandingPage");
       } else if (userType === "supervisor") {
         navigate("/LandingPage");
       } else if (userType === "auditor") {
         navigate("/LandingPage");
       } else {
-        // For all other user types, redirect to the landing page.
         navigate("/LandingPage");
       }
     } catch (err) {
