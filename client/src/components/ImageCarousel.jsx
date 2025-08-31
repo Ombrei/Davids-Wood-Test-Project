@@ -10,15 +10,15 @@ function ImageCarousel() {
       <Carousel.Item>
         <img className="d-block w-100" src={img1} alt="First slide" />
         <Carousel.Caption>
-          <h1>Welcome to Kent's Wood!</h1>
-          <h3>Where Quality Meets Craftsmanship</h3>
+          <h1>Welcome to David's Wood!</h1>
+          <h3>Where Quality Wood Meets Craftsmanship</h3>
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
         <img className="d-block w-100" src={img2} alt="Second slide" />
         <Carousel.Caption>
-          <h1>Welcome to Kent's Wood!</h1>
+          <h1>Welcome to David's Wood!</h1>
           <h3>Discover our exquisite range of wooden products.</h3>
         </Carousel.Caption>
       </Carousel.Item>

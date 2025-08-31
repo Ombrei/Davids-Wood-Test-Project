@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "./assets/logo.png";
 import cartLogo from "./assets/cart.png";
 import profLogo from "./assets/profLogo.png";
 import { useCart } from "./CartContext";
@@ -135,10 +134,8 @@ function Header() {
     <header className="header">
       <nav className="navbar navbar-expand-lg custom-navbar">
         <div className="container-fluid position-relative">
-          {/* Logo */}
-          <Link className="navbar-brand" to="/">
-            <img src={logo} alt="Your Logo" className="logo" />
-          </Link>
+          {/* Logo (need new logo)*/}
+
           {/* Toggle Button for Collapsed Navbar */}
           <button
             className="navbar-toggler"
