@@ -4,10 +4,7 @@ import "../pages/stylePages.css";
 
 // members
 import yuan from "../assets/yuan.jpg";
-import yapi from "../assets/yapi.jpg";
-import kim from "../assets/kim.png";
-import kent from "../assets/kent.jpg";
-import kurt from "../assets/kurt.jpg"; 
+import kurt from "../assets/kurt.jpg";
 
 const About = () => {
   return (
@@ -45,39 +42,6 @@ const About = () => {
               />
               <h3>Yuan</h3>
               <p className="tip-email">TIP Email: qycpmagtangob@tip.edu.ph</p>
-            </div>
-          </div>
-          <div className="team-col">
-            <div className="member-container">
-              <img
-                src={yapi}
-                alt="Yapi"
-                className="member-img img-fluid rounded mb-2"
-              />
-              <h3>Yapi</h3>
-              <p className="tip-email">TIP Email: qsyyamora@tip.edu.ph</p>
-            </div>
-          </div>
-          <div className="team-col">
-            <div className="member-container">
-              <img
-                src={kim}
-                alt="Kim"
-                className="member-img img-fluid rounded mb-2"
-              />
-              <h3>Kim</h3>
-              <p className="tip-email">TIP Email: qkdbombita@tip.edu.ph</p>
-            </div>
-          </div>
-          <div className="team-col">
-            <div className="member-container">
-              <img
-                src={kent}
-                alt="Kent"
-                className="member-img img-fluid rounded mb-2"
-              />
-              <h3>Kent</h3>
-              <p className="tip-email">TIP Email: qrkbguballa@tip.edu.ph</p>
             </div>
           </div>
           <div className="team-col">
