@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "kents_wood",
+    "database": "davids_wood",
     "host": "localhost",
     "dialect": "mysql"
   },
